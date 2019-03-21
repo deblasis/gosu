@@ -2,7 +2,7 @@ FROM golang:1.11-alpine3.8
 
 RUN apk add --no-cache file
 
-ENV RUNC_VERSION v1.0.0-rc5
+ENV RUNC_VERSION v1.0.0-rc6
 
 RUN set -eux; \
 	wget -O runc.tgz "https://github.com/opencontainers/runc/archive/${RUNC_VERSION}.tar.gz"; \
