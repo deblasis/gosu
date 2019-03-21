@@ -38,9 +38,9 @@ RUN set -eux; \
 	eval "GOARCH=arm GOARM=6 go build $BUILD_FLAGS -o /go/bin/gosu-armhf"; \
 	file /go/bin/gosu-armhf
 # boo Raspberry Pi, making life hard
-#RUN set -eux; \
-#	eval "GOARCH=arm GOARM=7 go build $BUILD_FLAGS -o /go/bin/gosu-armhf"; \
-#	file /go/bin/gosu-armhf
+RUN set -eux; \
+	eval "GOARCH=arm GOARM=7 go build $BUILD_FLAGS -o /go/bin/gosu-armv7"; \
+	file /go/bin/gosu-armv7
 RUN set -eux; \
 	eval "GOARCH=arm64 go build $BUILD_FLAGS -o /go/bin/gosu-arm64"; \
 	file /go/bin/gosu-arm64
