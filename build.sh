@@ -1,9 +1,9 @@
-#!/bin/bash
+#!/bin/sh
 set -e
 
-cd "$(dirname "$(readlink -f "$BASH_SOURCE")")"
+cd "$(dirname "$(readlink -f "$0")")"
 
-#set -x
+set -x
 
 docker build --pull -t gosu .
 
